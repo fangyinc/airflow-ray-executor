@@ -16,7 +16,7 @@ def package(name, desc):
         description=desc,
         long_description=long_description,
         long_description_content_type="text/markdown",
-        url="xxxx",
+        url="https://github.com/staneyffer/airflow-ray-executor",
         packages=setuptools.find_packages(),
         install_requires=[
             "ray"
@@ -36,19 +36,5 @@ def package(name, desc):
         ],
     )
 
-def clean():
-    import os
-    # os.removedirs('./build')
-    base_script = os.path.dirname(os.path.abspath(__file__))
-    build_dir = os.path.join(base_script, 'build')
-    dist_dir = os.path.join(base_script, 'dist')
-    shutil.rmtree(build_dir, ignore_errors=True)
-    shutil.rmtree(dist_dir, ignore_errors=True)
-    shutil.rmtree(os.path.join(base_script, 'api', 'launcherapi.egg-info'), ignore_errors=True)
-    shutil.rmtree(os.path.join(base_script, 'client', 'jdray.egg-info'), ignore_errors=True)
-    shutil.rmtree(os.path.join(base_script, 'core', 'launcher.egg-info'), ignore_errors=True)
-
-
 if __name__ == '__main__':
-    # clean()
     package('airflow-ray-executor', 'Airflow executor implemented using ray')
