@@ -7,8 +7,6 @@
 $ pip install airflow-ray-executor
 ```
 
-Edit your ``airflow.cfg`` to set your executor to class: `airflow_ray_executor.RayExecutor` and add ray client address to this file, example:
-
 编辑你的``airflow.cfg``, 设置executor为类: `airflow_ray_executor.RayExecutor`, 并添加ray客户端地址到该文件, 例如:
 
 ```pycon
