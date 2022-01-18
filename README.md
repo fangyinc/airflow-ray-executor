@@ -10,8 +10,6 @@ Airflow executor implemented using [ray](https://github.com/ray-project/ray)
 $ pip install airflow-ray-executor
 ```
 
-Edit your ``airflow.cfg`` to set your executor to class: `airflow_ray_executor.RayExecutor` and add ray client address to this file, example:
-
 ```pycon
 executor = airflow_ray_executor.RayExecutor
 
